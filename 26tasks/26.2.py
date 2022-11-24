@@ -6,7 +6,7 @@
  В ответе запишите два числа - минимальное количество рейсов и суммарную массу грузов,
  которые будут перевезены последним рейсом'''
 
-with open('26 (9).txt') as f:
+with open('26.txt') as f:
     n, S = map(int, f.readline().split())
     lst = sorted([int(x) for x in f], reverse=True)
     trips = []

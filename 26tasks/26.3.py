@@ -8,7 +8,7 @@
 Запишите в ответе два числа: сначала количество файлов,
 сохраненное на первом диске, затем - на втором.'''
 
-with open('26 (8).txt') as f:
+with open('26.txt') as f:
     N = int(f.readline())
     lst = sorted([int(i) for i in f])
     disc_s = []

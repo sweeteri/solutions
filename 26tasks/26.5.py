@@ -7,6 +7,7 @@
 with open('26.txt') as f:
     n = int(f.readline())
     d = {}
+
     for i in f:
         if int(i) in d: d[int(i)] += 1
         else: d[int(i)] = 1
