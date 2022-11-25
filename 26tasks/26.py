@@ -10,19 +10,17 @@ with open('26.txt') as f:
 
     for i in f:
         k, v = map(int, i.split())
-        d.setdefault(k, []).append(v)
+        d.setdefault(k, set()).add(v)
 
-    d = sorted(d.items(), key=lambda x: x[0], reverse=True)
-
-    for i in d:
-        k, v = i[0], i[1]
+    for i in sorted(d, reverse=True):
+        k, v = i, d[i]
         if len(v) >= 2:
-            v.sort()
+            v = sorted(v)
             for j in range(len(v) - 1):
-                if abs(v[j] - v[j + 1]) == 3:
+                if v[j + 1] - v[j] == 3:
                     max_row, min_seat = k, v[j]
                     break
             if max_row != 0:
                 break
 
-print(max_row, min_seat)
+print(max_row, min_seat + 1)
