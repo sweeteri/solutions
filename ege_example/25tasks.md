@@ -3,8 +3,11 @@
 ### Маски 
 ```python
 from fnmatch import fnmatch
+
+
+fnmatch(name, pattern)
 ```
-где
+где в строке-шаблоне
 ```
 * - последовательность символов
 ? - один символ
